@@ -118,6 +118,8 @@
 	<!-- fancybox -->
 	<link rel="stylesheet" href="plugins/fancyapps-fancyBox/source/jquery.fancybox.css">
 	<link rel="icon" href="harvesthq-logo-files/png/logo-no-background.png" type="image/gif" sizes="16x16">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
 
 
 	<!-- master stylesheet -->
@@ -214,6 +216,56 @@
 		.subnav:hover .subnav-content {
 		  display: block;
 		}
+
+		.header__signup {
+			flex: 4;
+			display: flex;
+			justify-content: flex-end;
+		  }
+		  
+		  .btn__signup {
+			border: 1px solid #ffffff;
+			font-size: 1.6rem;
+			color: #66BB6A;
+			display: inline-block;
+			transition: all .3s;
+			position: relative;
+			overflow: hidden;
+			z-index: 1;
+		  }
+		  
+		  .btn__signup:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: transparent;
+			z-index: -2;
+		  }
+		  
+		  .btn__signup:before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 0%;
+			height: 100%;
+			background-color: #66BB6A;
+			transition: all .3s;
+			z-index: -1;
+		  }
+		  
+		  .btn__signup:hover {
+			color: #ffffff;
+		  }
+		  
+		  .btn__signup:hover:before {
+			width: 100%;
+		  }
+		  
+
 </style>	
 
 
@@ -253,14 +305,12 @@
 		<li><a href="solarpanel.html">Irrigation Schemes</a></li>
 		<li><a href="tech.html">Modern Farming</a></li>
 		</div>
-		
-	</div>
-	   <a href="Feedback.html">Feedback</a>
-	   </div>
-	   
-
 </div>
-
+<div class="header__signup">
+	<a href="signup.html" class="btn btn__signup">
+		<i class="fa fa-user-plus"></i> Sign Up
+	</a>
+</div>
 </header>
 
 
@@ -489,31 +539,37 @@
 			</div>
 			
 			<div class="col-md-6">
-				<div class="welcome-single-services">
-					<div class="img-box">
-						<img src="images/educate.jpeg" alt="Tech">
-					</div>
-					<div class="text-box">
-						<div class="content">
-							<h3>Education</h3>
-							<p>Farmers have Rich Education Resources where they can learn so many things</p>
+				<a href="solarpanel.html" style="text-decoration: none; color: inherit;">
+					<div class="welcome-single-services">
+						<div class="img-box">
+							<img src="images/educate.jpeg" alt="Tech">
+						</div>
+						<div class="text-box">
+							<div class="content">
+								<h3>Education</h3>
+								<p>Farmers have rich educational resources where they can learn many things.</p>
+							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 			</div>
+			
 			<div class="col-md-6">
-				<div class="welcome-single-services">
-					<div class="img-box">
-						<img src="images/images.png" alt="Internet">
-					</div>
-					<div class="text-box">
-						<div class="content">
-							<h3>Shop</h3>
-							<p>Farmers get privillege of getting market at one step, they can buy and sell at thesame time</p>
+				<a href="purchase.html" style="text-decoration: none; color: inherit;">
+					<div class="welcome-single-services">
+						<div class="img-box">
+							<img src="images/images.png" alt="Internet">
+						</div>
+						<div class="text-box">
+							<div class="content">
+								<h3>Shop</h3>
+								<p>Farmers get the privilege of having a marketplace at their fingertips. They can buy and sell at the same time.</p>
+							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 			</div>
+			
 			<div class="col-md-6">
 				<a href="Feedback.html" style="text-decoration: none; color: inherit;">
 					<div class="welcome-single-services">
