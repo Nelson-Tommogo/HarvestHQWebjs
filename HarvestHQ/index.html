@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+	<style type="text/css">
+
+		.header {
+		  overflow: hidden;
+		  background-color: black;
+		  padding: 10px 30px ;
+		}
+		
+		.header a {
+		  float: left;
+		  color: white;
+		  text-align: center;
+		  padding: 12px;
+		  text-decoration: none;
+		  font-size: 18px; 
+		  line-height: 25px;
+		  border-radius: 4px;
+		}
+		
+		.header a.logo {
+		  font-size: 25px;
+		  font-weight: bold;
+		}
+		.header a.logo:hover {
+		  background-color: black;
+		}
+		
+		.header a:hover {
+		  background-color: rgb(86, 246, 11);
+		  color: black;
+		}
+		
+		.header a.active {
+		  background-color: dodgerblue;
+		  color: white;
+		}
+		
+		.header-right {
+		  float: right;
+		}
+		.subnav {
+		  float: left;
+		  overflow: hidden;
+		  padding: 12px;
+		  text-decoration: none;
+		  font-size: 18px; 
+		  line-height: 25px;
+		  border-radius: 4px;
+		}
+		
+		.subnav .subnavbtn {
+		  border: none;
+		  outline: none;
+		  color: white;
+		
+		  background-color: inherit;
+		  font-family: inherit;
+		  margin: 0;
+		}
+		
+		
+		.subnav-content {
+		  display: none;
+		  position: absolute;
+		
+		  background-color: black;
+		  z-index: 1;
+		}
+		
+		.subnav-content a {
+		  float: left;
+		  color: white;
+		  text-decoration: none;
+		}
+		
+		.subnav-content a:hover {
+		  background-color: rgb(6, 240, 26);
+		  color: black;
+		}
+		
+		.subnav:hover .subnav-content {
+		  display: block;
+		}
+</style>
+
+<head>
+	<meta name="viewport" content="width=device-width , initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<title>HarvestHQ</title>
+	<!-- viewport meta -->
+	<meta name="HarvestHQ" content="All You Need for Agronomy">
+
+	<!-- styles -->
+	<!-- helpers -->
+	<link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+	<!-- fontawesome css -->
+	<link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
+	<!-- strock gap icons -->
+	<link rel="stylesheet" href="plugins/Stroke-Gap-Icons-Webfont/style.css">
+	<!-- revolution slider css -->
+	<link rel="stylesheet" href="plugins/revolution/css/settings.css">
+	<link rel="stylesheet" href="plugins/revolution/css/layers.css">
+	<link rel="stylesheet" href="plugins/revolution/css/navigation.css">
+	<!-- flaticon css -->
+	<link rel="stylesheet" href="plugins/flaticon/flaticon.css">
+	<!-- jQuery ui css -->
+	<link href="plugins/jquery-ui-1.11.4/jquery-ui.css" rel="stylesheet">
+	<!-- owl carousel css -->
+	<link rel="stylesheet" href="plugins/owl.carousel-2/assets/owl.carousel.css">
+	<link rel="stylesheet" href="plugins/owl.carousel-2/assets/owl.theme.default.min.css">
+	<!-- animate css -->
+	<link rel="stylesheet" href="plugins/animate.min.css">
+	<!-- fancybox -->
+	<link rel="stylesheet" href="plugins/fancyapps-fancyBox/source/jquery.fancybox.css">
+	<link rel="icon" href="harvesthq-logo-files/png/logo-no-background.png" type="image/gif" sizes="16x16">
+
+
+	<!-- master stylesheet -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- responsive stylesheet -->
+	<link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="bot.css">
+
+
+
+</head>
+<body>
+
+	<style type="text/css">
+
+		.header {
+		  overflow: hidden;
+		  background-color: black;
+		  padding: 10px 30px ;
+		}
+		
+		.header a {
+		  float: left;
+		  color: white;
+		  text-align: center;
+		  padding: 12px;
+		  text-decoration: none;
+		  font-size: 18px; 
+		  line-height: 25px;
+		  border-radius: 4px;
+		}
+		
+		.header a.logo {
+		  font-size: 25px;
+		  font-weight: bold;
+		}
+		.header a.logo:hover {
+		  background-color: black;
+		}
+		
+		.header a:hover {
+		  background-color: rgb(86, 246, 11);
+		  color: black;
+		}
+		
+		.header a.active {
+		  background-color: dodgerblue;
+		  color: white;
+		}
+		
+		.header-right {
+		  float: right;
+		}
+		.subnav {
+		  float: left;
+		  overflow: hidden;
+		  padding: 12px;
+		  text-decoration: none;
+		  font-size: 18px; 
+		  line-height: 25px;
+		  border-radius: 4px;
+		}
+		
+		.subnav .subnavbtn {
+		  border: none;
+		  outline: none;
+		  color: white;
+		
+		  background-color: inherit;
+		  font-family: inherit;
+		  margin: 0;
+		}
+		
+		
+		.subnav-content {
+		  display: none;
+		  position: absolute;
+		
+		  background-color: black;
+		  z-index: 1;
+		}
+		
+		.subnav-content a {
+		  float: left;
+		  color: white;
+		  text-decoration: none;
+		}
+		
+		.subnav-content a:hover {
+		  background-color: rgb(6, 240, 26);
+		  color: black;
+		}
+		
+		.subnav:hover .subnav-content {
+		  display: block;
+		}
+</style>	
+
+
+<header>
+	<div class="header">
+	 <a href="#default" class="logo"><img style="height: 80px;" src="harvesthq-logo-files/png/logo-no-background.png" alt="logo"></a>
+	 <br>
+	  <div class="header-right">
+
+		<div class="subnav">
+			<button class="subnavbtn">Shop<i class="#"></i></button>
+			<div class="subnav-content">
+			<li><a href="purchase.html">Purchase</a></li>
+			<li><a href="Sell.html">Sell</a></li>
+			</div>
+		</div>		
+
+	   <div class="subnav">
+		   <button class="subnavbtn">Weather<i class="#"></i></button>
+		   <div class="subnav-content">
+		   <li><a href="weatherwebsite/index.html">Search</a></li>
+		   <li><a href="weatherwebsite/currentLocationW/index.html">Your Current Location</a></li>
+		   </div>
+	   </div>
+	   <a href="govts.html">Projects</a>
+	   <div class="subnav">
+		   <button class="subnavbtn">Market Insights<i class="#"></i></button>
+		   <div class="subnav-content">
+		   <li><a href="seed.html">Info on Seeds</a></li>
+		   <li><a href="seed price.html">Current Seeds Price</a></li>
+		   <li><a href="Fertilizer.html">Fertilizer</a></li>
+		   </div>
+	   </div>
+	   <div class="subnav">
+		<button class="subnavbtn">Education<i class="#"></i></button>
+		<div class="subnav-content">
+		<li><a href="solarpanel.html">Irrigation Schemes</a></li>
+		<li><a href="tech.html">Modern Farming</a></li>
+		</div>
+	</div>
+	   <a href="Feedback.html">Feedback</a>
+	   </div>
+
+</div>
+
+</header>
+
+
+<section class="rev_slider_wrapper thm-banner-wrapper">
+	<div id="slider1" class="rev_slider"  data-version="5.0">
+		<ul>
+
+			<li data-transition="parallaxvertical" data-ease="SlowMo.ease">
+				<img src="images/slider/back.jpg"  alt="Crop Background">
+				<div class="tp-caption sfb tp-resizeme caption-h1" 
+			        data-x="left" data-hoffset="0" 
+			        data-y="top" data-voffset="188" 
+			        data-whitespace="nowrap"
+			        data-transform_idle="o:1;" 
+			        data-transform_in="o:0" 
+			        data-transform_out="o:0" 
+			        data-start="500">
+					HarvestHQ
+			    </div>
+				<div class="tp-caption sfb tp-resizeme caption-p" 
+			        data-x="left" data-hoffset="33" 
+			        data-y="top" data-voffset="315" 
+			        data-whitespace="nowrap"
+			        data-transform_idle="o:1;" 
+			        data-transform_in="o:0" 
+			        data-transform_out="o:0" 
+			        data-start="1000">
+					"HArvestHQ - <strong>Your Field Expertise</strong>."
+			    </div>
+				
+			</li>
+
+			<li data-transition="parallaxvertical" data-ease="SlowMo.ease">
+				<img src="images/slider/12.jpeg"  alt="Farms">
+				<div class="tp-caption sfb tp-resizeme caption-h1" 
+			        data-x="left" data-hoffset="0" 
+			        data-y="top" data-voffset="248" 
+			        data-whitespace="nowrap"
+			        data-transform_idle="o:1;" 
+			        data-transform_in="o:0" 
+			        data-transform_out="o:0" 
+			        data-start="500">
+					Our<br> Vision
+			    </div>
+				<div class="tp-caption sfb tp-resizeme caption-p" 
+			        data-x="left" data-hoffset="0" 
+			        data-y="top" data-voffset="375" 
+			        data-whitespace="nowrap"
+			        data-transform_idle="o:1;" 
+			        data-transform_in="o:0" 
+			        data-transform_out="o:0" 
+			        data-start="1000">
+					Promoting Sustainable Agriculture in the Contry, Supported by UAYO
+			    </div>
+				<div class="tp-caption sfl tp-resizeme" 
+			        data-x="left" data-hoffset="0" 
+			        data-y="top" data-voffset="500" 
+			        data-whitespace="nowrap"
+			        data-transform_idle="o:1;" 
+			        data-transform_in="o:0" 
+			        data-transform_out="o:0" 
+			        data-start="1500">
+			    </div>
+			</li>
+			<li data-transition="parallaxvertical" data-ease="SlowMo.ease">
+				<img src="images/slider/11.jpeg"  alt="crop">
+				<div class="tp-caption sfb tp-resizeme caption-h1" 
+			        data-x="left" data-hoffset="0" 
+			        data-y="top" data-voffset="248" 
+			        data-whitespace="nowrap"
+			        data-transform_idle="o:1;" 
+			        data-transform_in="o:0" 
+			        data-transform_out="o:0" 
+			        data-start="500">
+					HarvestHQ<br>VISION
+			    </div>
+				<div class="tp-caption sfb tp-resizeme caption-p" 
+			        data-x="left" data-hoffset="0" 
+			        data-y="top" data-voffset="375" 
+			        data-whitespace="nowrap"
+			        data-transform_idle="o:1;" 
+			        data-transform_in="o:0" 
+			        data-transform_out="o:0" 
+			        data-start="1000">
+					is to Promote Sustainable Agriculture to the Small Scale Farmers					
+			    </div>
+				<div class="tp-caption sfl tp-resizeme" 
+			        data-x="left" data-hoffset="0" 
+			        data-y="top" data-voffset="500" 
+			        data-whitespace="nowrap"
+			        data-transform_idle="o:1;" 
+			        data-transform_in="o:0" 
+			        data-transform_out="o:0" 
+			        data-start="1500">
+					<!--<a href="about.html" class="thm-btn">About Us <i class="fa fa-arrow-right"></i></a>-->
+			    </div>
+			</li>
+
+			<li data-transition="parallaxvertical" data-ease="SlowMo.ease">
+				<img src="images/slider/12.jpeg"  alt="farms">
+				<div class="tp-caption sfb tp-resizeme caption-h1" 
+			        data-x="left" data-hoffset="0" 
+			        data-y="bottom" data-voffset="0" 
+			        data-whitespace="nowrap"
+			        data-transform_idle="o:1;" 
+			        data-transform_in="o:0" 
+			        data-transform_out="o:0" 
+			        data-start="500">
+					
+			    </div>
+				<div class="tp-caption sfb tp-resizeme caption-h1" 
+			        data-x="right" data-hoffset="0" 
+			        data-y="bottom" data-voffset="0" 
+			        data-whitespace="nowrap"
+			        data-transform_idle="o:1;" 
+			        data-transform_in="o:0" 
+			        data-transform_out="o:0" 
+			        data-start="1700">
+					
+			    </div>
+				<div class="tp-caption sfb tp-resizeme caption-p" 
+			        data-x="right" data-hoffset="50" 
+			        data-y="top" data-voffset="275" 
+			        data-whitespace="nowrap"
+			        data-transform_idle="o:1;" 
+			        data-transform_in="o:0" 
+			        data-transform_out="o:0" 
+			        data-start="1100">
+					"Farmers: the architects of a nation's food foundation, sowing seeds of sustenance and reaping the harvest of prosperity."  - Nelson Tommogo			    </div>
+			    <div class="tp-caption sfl tp-resizeme" 
+			        data-x="right" data-hoffset="460" 
+			        data-y="top" data-voffset="360" 
+			        data-whitespace="nowrap"
+			        data-transform_idle="o:1;" 
+			        data-transform_in="o:0" 
+			        data-transform_out="o:0" 
+			        data-start="1500">
+					<!--<a href="https://www.vitbhopal.ac.in/" class="thm-btn inverse">VIT Bhopal <i class="fa fa-arrow-right"></i></a>-->
+			    </div>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<section class="about-info-box sec-padding">
+	<div class="thm-container">
+		<div class="row">
+		
+			
+			<div class="col-lg-8 col-md-8">
+				<div class="sec-title">
+					<h2>How do I register on HarvestHQ?</h2>
+					<ul class="bulleted-list">
+					<li><i class="fa fa-arrow-circle-right"></i> To register on HarvestHQ, click on the "Sign Up" button on the homepage, fill in the required information, and follow the on-screen instructions. You'll receive a confirmation email to verify your account.</li> 
+					</ul>
+					<h2><span>What payment methods are supported on HarvestHQ?</span></h2>
+					<ul class="bulleted-list">
+						<li><i class="fa fa-arrow-circle-right"></i>HarvestHQ currently supports payments through various methods, including credit/debit cards, online banking, and mobile wallets.</li>
+						<li><i class="fa fa-arrow-circle-right"></i>Specific details on supported payment providers can be found in the payment section of your account settings.</li>
+					</ul>
+					<h2><span>How does HarvestHQ ensure the security of my data?</span></h2>
+					<ul class="bulleted-list">
+					<li><i class="fa fa-arrow-circle-right"></i>At HarvestHQ, we prioritize the security and privacy of your data.</li>
+					<li><i class="fa fa-arrow-circle-right"></i>We implement robust encryption protocols, conduct regular security audits, and adhere to industry best practices.</li>
+					<li><i class="fa fa-arrow-circle-right"></i>For more details on our security measures, please refer to our Security Policy in the Help Center.</li> 
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="welcome-services home-one">
+	<div class="thm-container">
+		<div class="sec-title">
+			<h2><span>Features</span></h2>
+			<p>Servies Farmers will get</p>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="welcome-single-services">
+					<div class="img-box">
+						<img src="images/weather.jpeg" alt="weather">
+					</div>
+					<div class="text-box">
+						<div class="content">
+							<h3>Weather Report</h3>
+							<p>Get all information needed on the weather of your current location or by searching for the location.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="welcome-single-services">
+					<div class="img-box">
+						<img src="images/welcome-services/2.jpg" alt="seed">
+					</div>
+					<div class="text-box">
+						<div class="content">
+							<h3>Seed Price & Info</h3>
+							<p>Realtime Seed Price along with all the Knowledge you need about different types of seeds</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="welcome-single-services">
+					<div class="img-box">
+						<img src="harvesthq-logo-files/png/logo-no-background.png" alt="Govt Schemes">
+					</div>
+					<div class="text-box">
+						<div class="content">
+							<h3>Goverment Schemes</h3>
+							<p>Latest Government Schemes for maximizing the benefits and minimizing the loss.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="welcome-single-services">
+					<div class="img-box">
+						<img src="images/educate.jpeg" alt="Tech">
+					</div>
+					<div class="text-box">
+						<div class="content">
+							<h3>Education</h3>
+							<p>Farmers have Rich Education Resources where they can learn so many things</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="welcome-single-services">
+					<div class="img-box">
+						<img src="images/images.png" alt="Internet">
+					</div>
+					<div class="text-box">
+						<div class="content">
+							<h3>Shop</h3>
+							<p>Farmers get privillege of getting market at one step, they can buy and sell at thesame time</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="welcome-single-services">
+					<div class="img-box">
+						<img src="images/farmerfeedback.jpeg" alt="Ui Ux">
+					</div>
+					<div class="text-box">
+						<div class="content">
+							<h3>Farmers Feedback</h3>
+							<p>Farmers feedback is valuable to growth of HarvestHQ, these feedback are usefull for interactiveness of the platform</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<footer id="footer" class="sec-padding">
+	<div class="thm-container">
+		<div class="row">
+			<div class="col-md-4 col-sm-6 footer-widget">
+				<div class="about-widget">
+					<a href="index.html"><img style="height: 150px;" src="images/footer-logo.png" alt="logo"/></a>
+					<p></p>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6 footer-widget">
+				<div class="pl-30">
+					<div class="title" style="color: #05f7c2;">
+						<h2><span>"Farmers are the founders of human civilization."</span></h2>
+						<br>
+						<p><strong>- Wendell Berry</strong></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6 footer-widget">
+			</div>
+		</div>
+	</div>
+</footer>
+
+<section class="bottom-bar">
+	<div class="thm-container clearfix">
+		<div class="pull-left">
+			<p>HarvestHQ All rights reserved.</p>
+		</div>
+		<div class="pull-right">
+			
+			<a href="#">Created By : <i>HarvestHQ  and UAYO</i> </a>
+			
+		</div>
+	</div>
+</section>
+
+
+<button id="chatButton" class="chat-button"><i class="fas fa-comment"></i></button>
+                <div id="chatWindow" class="chat-window">
+                    <div class="title">NEED HELP?</div>
+                  <div id="chatMessages" class="chat-messages"></div>
+                  <div class="chat-input">
+                    <input type="text" id="messageInput" placeholder="Type your message...">
+                    <button id="sendButton">Send</button>
+                  </div>
+                </div>
+                <script src="bot.js"></script>
+
+<!-- jQuery js -->
+<script src="plugins/jquery/jquery-1.11.3.min.js"></script>
+<!-- bootstrap js -->
+<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+<!-- jQuery ui js -->
+<script src="plugins/jquery-ui-1.11.4/jquery-ui.js"></script>
+<!-- owl carousel js -->
+<script src="plugins/owl.carousel-2/owl.carousel.min.js"></script>
+<!-- jQuery appear -->
+<script src="plugins/jquery-appear/jquery.appear.js"></script>
+<!-- jQuery countTo -->
+<script src="plugins/jquery-countTo/jquery.countTo.js"></script>
+<!-- jQuery validation -->
+<script src="plugins/jquery-validation/dist/jquery.validate.min.js"></script>
+<!-- gmap.js helper -->
+<script src="http://maps.google.com/maps/api/js"></script>
+<!-- gmap.js -->
+<script src="plugins/gmap.js"></script>
+<!-- mixit up -->
+<script src="plugins/jquery.mixitup.min.js"></script>
+
+<!-- revolution slider js -->
+<script src="plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
+<script src="plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
+<script src="plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+<script src="plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+<script src="plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+<script src="plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+<script src="plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+<script src="plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+<script src="plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+<script src="plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script src="plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
+
+<!-- fancy box -->
+<script src="plugins/fancyapps-fancyBox/source/jquery.fancybox.pack.js"></script>
+<!-- type script -->
+<script src="plugins/typed.js-master/dist/typed.min.js"></script>
+
+<!-- theme custom js  -->
+<script src="js/main.js"></script>
+</body>
+</html>
