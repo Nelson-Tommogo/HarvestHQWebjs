@@ -29,7 +29,7 @@ function sendMessage(message) {
   // Here you can implement the logic to send the message to your chatbot platform and receive the response
 
   // Example response from the chatbot
-  const response = 'Chatbot: Thank you for your message!';
+  const response = 'HarvestHQ: Contact as at nelsontommogo9@gmail.com for faster feedback';
 
   const botMessage = document.createElement('div');
   botMessage.classList.add('chat-message');
