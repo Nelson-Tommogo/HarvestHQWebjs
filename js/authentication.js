@@ -3,13 +3,13 @@
   // Your web app's Firebase configuration
   // For Firebase JS SDK v7.20.0 and later, measurementId is optional
   const firebaseConfig = {
-    apiKey: "AIzaSyDeXMdhmd_ubz-cpIDVttBRaQhubXah9UY",
-    authDomain: "harvesthq-84a78.firebaseapp.com",
-    projectId: "harvesthq-84a78",
-    storageBucket: "harvesthq-84a78.appspot.com",
-    messagingSenderId: "10610488052",
-    appId: "1:10610488052:web:9949db7016be1a9a4ae4a1",
-    measurementId: "G-VGFCP6YK50"
+    apiKey: "AIzaSyC5KmqA_ZYVKpIWpZpa-r58Epnk0f0B0CU",
+    authDomain: "harvesthq-fd804.firebaseapp.com",
+    projectId: "harvesthq-fd804",
+    storageBucket: "harvesthq-fd804.appspot.com",
+    messagingSenderId: "968917107456",
+    appId: "1:968917107456:web:a24a838d028bbb1343e9e5",
+    measurementId: "G-B3T1B5TZ9N"
   };
 
 
