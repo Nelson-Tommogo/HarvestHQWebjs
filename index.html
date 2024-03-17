@@ -116,6 +116,7 @@
 	<link rel="stylesheet" href="plugins/owl.carousel-2/assets/owl.theme.default.min.css">
 	<!-- animate css -->
 	<link rel="stylesheet" href="plugins/animate.min.css">
+	
 	<!-- fancybox -->
 	<link rel="stylesheet" href="plugins/fancyapps-fancyBox/source/jquery.fancybox.css">
 	<link rel="icon" href="harvesthq-logo-files/png/logo-no-background.png" type="image/gif" sizes="16x16">
@@ -123,6 +124,9 @@
 
 
 
+
+
+	
 	<!-- master stylesheet -->
 	<link rel="stylesheet" href="css/style.css">
 	<!-- responsive stylesheet -->
@@ -265,6 +269,9 @@
 		  .btn__signup:hover:before {
 			width: 100%;
 		  }
+
+
+		  
 		  
 
 </style>	
@@ -291,13 +298,13 @@
 		   <li><a href="weatherwebsite/currentLocationW/weather.html">Your Current Location</a></li>
 		   </div>
 	   </div>
-	   <a href="projects.html">Projects</a>
 	   <div class="subnav">
 		   <button class="subnavbtn">Market Insights<i class="#"></i></button>
 		   <div class="subnav-content">
 		   <li><a href="seed.html">Info on Seeds</a></li>
 		   <li><a href="seed price.html">Current Seeds Price</a></li>
 		   <li><a href="Fertilizer.html">Fertilizer</a></li>
+		   <a href="projects.html">Projects</a>
 		   </div>
 	   </div>
 	   <div class="subnav">
@@ -307,11 +314,19 @@
 		<li><a href="tech.html">Modern Farming</a></li>
 		</div>
 </div>
-<div class="header__signup">
-	<a href="signup.html" class="btn btn__signup">
-		<i class="fa fa-user-plus"></i> Sign Up
+<li class="nav-item dropdown">
+	<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	  <i class="fas fa-fw fa-user"></i>
+	<span>Profile</span>
 	</a>
-</div>
+	<div class="dropdown-menu">
+	   <h6 class="dropdown-header">Account Settings:</h6>
+	   <a class="dropdown-item" href="login.html">Login</a>
+	   <a class="dropdown-item" href="register.html">Register</a>
+	   <a class="dropdown-item" href="login.html">Forgot Password</a>
+	   <div class="dropdown-divider"></div>
+	</div>
+ </li>
 </header>
 
 

@@ -1,11 +1,74 @@
-jQuery(document).ready(function($){"use strict";if($('#home-banner').length){$('#home-banner').owlCarousel({loop:false,dots:false,nav:false,items:1,autoplay:true,smartSpeed:1000,animateOut:'bounceOut',animateIn:'fadeIn',URLhashListener:true,autoplayHoverPause:false,});}
-if($('.post-slider').length){$('.post-slider').owlCarousel({loop:false,dots:false,nav:true,items:1,});}
-if($('.testimonial-slider-style-1').length){$('.testimonial-slider-style-1').owlCarousel({loop:false,dots:true,nav:false,items:1,});}
-if($('.team-slider').length){$('.team-slider').owlCarousel({loop:true,dots:false,nav:false,navText:'',items:5,smartSpeed:1000,padding:0,margin:30,responsiveClass:true,autoplay:true,responsive:{0:{items:1,},768:{items:2,},992:{items:3,},1199:{items:5,}}});}
-if($('audio').length){$('audio').audioPlayer();}
-if($('.countdown236').length){var austDay=new Date();austDay=new Date(2017,11-1,11,15,35,0);$('.countdown236').countdown({until:austDay,});$('#year').text(austDay.getFullYear());}
-$('a[data-rel]').each(function(){$(this).attr('rel',$(this).data('rel'));$(".pretty-gallery a[rel^='prettyPhoto']").prettyPhoto();});if($('.gallery').length){$(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:3000,autoplay_slideshow:true});$(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000,hideflash:true});}
-if($('#map_contact_1').length){var map;var myLatLng=new google.maps.LatLng(40.712784,-74.005941);var myOptions={zoom:12,center:myLatLng,zoomControl:true,scrollwheel:false,mapTypeId:google.maps.MapTypeId.ROADMAP,mapTypeControl:false,styles:[{stylers:[{hue:'#2b2b2b'},{saturation:-100,},{lightness:10}]}],}
-map=new google.maps.Map(document.getElementById('map_contact_1'),myOptions);var marker=new google.maps.Marker({position:map.getCenter(),map:map,icon:'images/map-icon.png'});marker.getPosition();}
-if($('#map_contact_2').length){var map;var myLatLng=new google.maps.LatLng(40.712784,-74.005941);var myOptions={zoom:12,center:myLatLng,zoomControl:true,scrollwheel:false,mapTypeId:google.maps.MapTypeId.ROADMAP,mapTypeControl:false,styles:[{stylers:[{hue:'#2b2b2b'},{saturation:-100,},{lightness:10}]}],}
-map=new google.maps.Map(document.getElementById('map_contact_2'),myOptions);var marker=new google.maps.Marker({position:map.getCenter(),map:map,icon:'images/footer-map-icon.png'});marker.getPosition();}});
+(function($) {
+    "use strict"; // Start of use strict
+  
+    // Toggle the side navigation
+     $(document).on('click', '#sidebarToggle', function(e) {  
+      e.preventDefault();
+      $("body").toggleClass("sidebar-toggled");
+      $(".sidebar").toggleClass("toggled");
+    });
+  
+    // Prevent the content wrapper from scrolling when the fixed side navigation hovered over
+    $('body.fixed-nav .sidebar').on('mousewheel DOMMouseScroll wheel', function(e) {
+      if ($window.width() > 768) {
+        var e0 = e.originalEvent,
+          delta = e0.wheelDelta || -e0.detail;
+        this.scrollTop += (delta < 0 ? 1 : -1) * 30;
+        e.preventDefault();
+      }
+    });
+    
+    // Category Owl Carousel
+    var objowlcarousel = $(".owl-carousel-category");
+    if (objowlcarousel.length > 0) {
+       objowlcarousel.owlCarousel({
+          items: 4,
+          lazyLoad: true,
+          pagination: false,
+          loop: true,
+          autoPlay: 2000,
+          navigation: true,
+          stopOnHover: true,
+          navigationText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"]
+      });
+    }
+  
+    // Login Owl Carousel
+    var mainslider = $(".owl-carousel-login");
+    if (mainslider.length > 0) {
+        mainslider.owlCarousel({
+            items: 1,
+            lazyLoad: true,
+            pagination: true,
+            autoPlay: 4000,
+           loop: true,
+          singleItem: true,
+            navigation: false,
+            stopOnHover: true,
+          navigationText: ["<i class='mdi mdi-chevron-left'></i>", "<i class='mdi mdi-chevron-right'></i>"]
+        });
+    }
+      
+    // Tooltip
+    $('[data-toggle="tooltip"]');
+  
+    // Scroll to top button appear
+    $(document).on('scroll', function() {
+      var scrollDistance = $(this).scrollTop();
+      if (scrollDistance > 100) {
+        $('.scroll-to-top').fadeIn();
+      } else {
+        $('.scroll-to-top').fadeOut();
+      }
+    });
+  
+    // Smooth scrolling using jQuery easing
+    $(document).on('click', 'a.scroll-to-top', function(event) {
+      var $anchor = $(this);
+      $('html, body').stop().animate({
+        scrollTop: ($($anchor.attr('href')).offset().top)
+      }, 1000, 'easeInOutExpo');
+      event.preventDefault();
+    });
+  
+  })(jQuery); // End of use strict

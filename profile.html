@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <div class="profile-container">
+        <h1>User Profile</h1>
+        <div class="profile-details">
+            <div class="profile-image">
+                <img id="profile-image" src="profilephoto.jpg" alt="Profile Picture">
+                <input type="file" id="profile-photo-input" accept="image/*" style="display: none;">
+                <button id="change-photo-btn">Change Photo</button>
+            </div>
+            <div class="profile-info">
+                <p><strong>Name:</strong> <span id="profile-name"></span></p>
+                <p><strong>Email:</strong> <span id="profile-email"></span></p>
+                <!-- Add more profile information here -->
+            </div>
+        </div>
+        <div class="profile-actions">
+            <button id="edit-profile-btn">Edit Profile</button>
+            <button id="save-profile-btn" style="display: none;">Save</button>
+        </div>
+    </div>
+
+    <script src="images/profile.js"></script>
+</body>
+</html>
